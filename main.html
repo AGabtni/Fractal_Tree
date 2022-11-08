@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Fractal Tree</title>
+	<style>
+		body {
+			margin: 0;
+			color: white;
+
+		}
+
+		label {
+			display: inline-block;
+			width: 110px;
+		}
+
+		input {
+			padding: 5px 10px;
+		}
+
+		div {
+			margin-bottom: 10px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<script src="js/three.js"></script>
+
+	<div id="container">
+		<div id="navi">
+			<canvas id="glCanvas"></canvas>
+		</div>
+
+		<div id="infoi">
+			<h1>Inputs</h1>
+			<div>
+				<label for="trunkLength">Trunk Segment Length:</label>
+				<input type="number" id="trunkLength" name="depth" min="50" value="50">
+			</div>
+			<div>
+				<label for="depth">Tree Depth:</label>
+				<input type="number" id="depth" name="depth" min="0" value="3">
+			</div>
+			<div>
+				<label for="angle">Branch Angle:</label>
+				<input type="number" id="angle" name="angle" min="0" value="60">
+			</div>
+			<div>
+				<label for="childrenNum">Number of children:</label>
+				<input type="number" id="childrenNum" name="childrenNum" min="0" value="6">
+			</div>
+			<div>
+				<label for="scaleRatio" class="toggle">Children Branch Scale Multiplier:</label>
+				<input type="number" id="scaleRatio" name="scaleRatio" min="1" value="1.5">
+			</div>
+			<div>
+				<label for="canRotate" class="toggle">Can Rotate :</label>
+				<input type="checkbox" id="canRotate" class="checkbox" />
+			</div>
+			<button onClick="OnGenerate()">Generate</button>
+		</div>
+	</div>
+	<script src="js/fractalTree.js"></script>
+
+</body>
+
+</html>
